@@ -1,0 +1,36 @@
+{
+   "results":[
+      {
+         "artistName":"Guns N' Roses",
+         "collectionName":"Use Your Illusion II",
+         "trackName":"Knockin' On Heaven's Door",
+         "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/85/83/46/85834663-4b0e-4233-73e7-11aca01841b7/mzaf_4375692168737999276.plus.aac.p.m4a",
+         "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d8/24/69/d82469d6-7178-cceb-5618-e986de10072b/source/100x100bb.jpg",
+         "primaryGenreName":"Hard Rock"
+      },
+      {
+         "artistName":"Guns N' Roses",
+         "collectionName":"Appetite for Destruction",
+         "trackName":"Sweet Child O' Mine",
+         "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/1c/74/00/1c740032-7b54-31eb-ee98-602d286846bf/mzaf_9133249796757188353.plus.aac.p.m4a", 
+         "artworkUrl100":"https://is3-ssl.mzstatic.com/image/thumb/Music118/v4/3e/fc/30/3efc3003-6917-e7ac-07bf-4396713d9e97/source/100x100bb.jpg",
+         "primaryGenreName":"Hard Rock"
+      },
+      {
+         "artistName":"Led Zeppelin",
+         "collectionName":"Led Zeppelin II (Remastered)",
+         "trackName":"Ramble On",
+         "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/Music7/v4/32/21/bb/3221bb67-b108-b503-22d8-503b7ab7fec7/mzaf_2731180796526773795.plus.aac.p.m4a",
+         "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/12/92/36/1292365e-2951-c1ff-3c09-a91ba9927d26/source/100x100bb.jpg",
+         "primaryGenreName":"Rock"
+      },
+      {
+         "artistName":"Led Zeppelin",
+         "collectionName":"Led Zeppelin II (Remastered)",
+         "trackName":"Heartbreaker",
+         "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/Music7/v4/69/26/2b/69262ba9-ab55-0910-463d-a03f66dd2df9/mzaf_3021379161038161964.plus.aac.p.m4a",
+         "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/12/92/36/1292365e-2951-c1ff-3c09-a91ba9927d26/source/100x100bb.jpg",
+         "primaryGenreName":"Rock"
+      }
+   ]
+}
