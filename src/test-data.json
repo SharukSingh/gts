@@ -31,6 +31,22 @@
          "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/Music7/v4/69/26/2b/69262ba9-ab55-0910-463d-a03f66dd2df9/mzaf_3021379161038161964.plus.aac.p.m4a",
          "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music1/v4/12/92/36/1292365e-2951-c1ff-3c09-a91ba9927d26/source/100x100bb.jpg",
          "primaryGenreName":"Rock"
+      },
+      {
+         "artistName":"Joe Satriani",
+         "collectionName":"Surfing with the Alien",
+         "trackName":"Always with Me, Always with You",
+         "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/b1/41/52/b1415215-8dc5-c4e1-71f9-fb09aef3ff09/mzaf_8070936842156713624.plus.aac.p.m4a",
+         "artworkUrl100":"https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/53/61/03/53610385-378e-96ee-2690-2f50dce27700/source/100x100bb.jpg",
+         "primaryGenreName":"Rock"
+      },
+      {
+         "artistName":"Joe Satriani",
+         "collectionName":"Surfing with the Alien",
+         "trackName":"Surfing with the Alien",
+         "previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview128/v4/e3/be/1d/e3be1d6f-442c-58bc-5ded-56857c00f2b8/mzaf_3423052852640574028.plus.aac.p.m4a",
+         "artworkUrl100":"https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/53/61/03/53610385-378e-96ee-2690-2f50dce27700/source/100x100bb.jpg",
+         "primaryGenreName":"Rock"
       }
    ]
 }
