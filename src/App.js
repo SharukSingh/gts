@@ -22,7 +22,8 @@ class App extends Component {
          "artworkUrl100":"",
          "primaryGenreName":""
       },
-      options: ['abc','def','ghi','jkl'] // #1
+      score: 0,
+      options: [] // #1
       }
   }
 
@@ -30,6 +31,32 @@ class App extends Component {
     console.log('componentDidMount')
 
     this.getCurrentSong();
+    this.optionsForCurrentSong();
+  }
+
+  optionsForCurrentSong() {
+    //shuffle the objects inside results array
+    let answers = this.shuffle(this.state.data.results)
+    //get only the trackname from the answers object
+    let answersTrackName = answers.map(item => item.trackName)
+    //get only 4 options from answersTrackName
+    let options = answersTrackName.splice(0,4)
+    //search the current song track if add that to options if not currently there
+
+
+    let currentTrackName = this.state.currentSong.trackName
+    let trackIndex = options.findIndex(checkTrackName, currentTrackName)
+
+    function checkTrackName(name) {
+      return name === currentTrackName
+    }
+
+    let randomNumber = Math.floor(Math.random() * 4)
+    if(trackIndex === -1) {
+      options[randomNumber] = currentTrackName
+    }
+
+    this.setState({options: options})
   }
 
   getCurrentSong() {
@@ -39,32 +66,12 @@ class App extends Component {
     let resultsLen = this.state.data.results.length
     let randomNumber = Math.floor(Math.random() * resultsLen)
 
-    this.setState({currentSong: this.state.data.results[randomNumber]})
-
-    // this.setState({currentSong: this.state.data.results[randomNumber]}, () => {
-    //   this.optionsForCurrentSong()
-    // })
+    this.setState({currentSong: this.state.data.results[randomNumber]}, () => {
+      this.optionsForCurrentSong()
+    })
   }
 
-  optionsForCurrentSong() {
-    let randomNumber = Math.floor(Math.random() * 4)
-console.log(this.state.currentSong.trackName)
-console.log(this.state.options[1])
-    let answers = this.shuffle(this.state.data.results)
-    answers[randomNumber] = this.state.currentSong.trackName
-    this.setState({options: answers})  // #1
 
-    
-    // this.setState({options[1]: 'test'})
-  }
-
-  // componentDidUpdate(prevState) {
-  //   if(this.state.currentSong !== prevState.currentSong) {
-  //     console.log('hurray')
-  //     this.optionsForCurrentSong()
-  //   }
-
-  // }
 
   shuffle(array) {
       var arrayCopy = array.slice();
@@ -86,44 +93,49 @@ console.log(this.state.options[1])
     }
 
 
-  check() {
-    console.log('test')
-    console.log(this.value)
+  check(e) {
+    if(e.target.value === this.state.currentSong.trackName) {
+      console.log('correct')
+      this.setState(prevState => ({
+        score: prevState.score + 10
+      }))
+      this.getCurrentSong();
+    } else {
+      console.log('not correct')
+      this.setState(prevState => ({
+        score: prevState.score - 5
+      }))
+    }
   }
 
   render() {
 
-    // console.log(this.state.currentSong.trackName)
-    // console.log(this.state.options[0].trackName)
-    // if(this.state.currentSong.trackName === this.state.options[0].trackName) { console.log('true1')} else {console.log('false1')}
-    // if(this.state.currentSong.trackName === this.state.options[1].trackName) { console.log('true2')} else {console.log('false2')}
-    // if(this.state.currentSong.trackName === this.state.options[2].trackName) { console.log('true3')} else {console.log('false3')}
-    // if(this.state.currentSong.trackName === this.state.options[3].trackName) { console.log('true4')} else {console.log('false4')}
-    
+    console.log('render')
     return(
       <div className="App">
         <div className="App-header">
           <h1>Guess That Song</h1>
 
         {/* need to display a random song image */}
-
+        <p>Score: {this.state.score}</p>
           <img src={this.state.currentSong.artworkUrl100} alt="" />
           <br />
           
         {/* need to present a song audio that is of the above image */}
 
-          <audio src={this.state.currentSong.previewUrl} controls>
+          <audio src={this.state.currentSong.previewUrl} controls autoPlay>
             Audio not supported
           </audio>
           <br />
 
-          
-          
+
           <div>
-            <button onClick={this.check} value={this.state.options[0].trackName}>{this.state.options[0].trackName}</button> {/*#1*/}
-            <button value={this.state.options[1].trackName}>{this.state.options[1].trackName}</button>
-            <button value={this.state.options[2].trackName}>{this.state.options[2].trackName}</button>
-            <button value={this.state.options[3].trackName}>{this.state.options[3].trackName}</button>
+            <button className="Option-Btn" onClick={(e) => this.check(e)} value={this.state.options[0]}>{this.state.options[0]}</button> {/*#1*/}
+            <button className="Option-Btn" onClick={(e) => this.check(e)} value={this.state.options[1]}>{this.state.options[1]}</button>
+            <button className="Option-Btn" onClick={(e) => this.check(e)} value={this.state.options[2]}>{this.state.options[2]}</button>
+            <button className="Option-Btn" onClick={(e) => this.check(e)} value={this.state.options[3]}>{this.state.options[3]}</button>
+            <br/>
+            {/*<button onClick={(e) => this.getCurrentSong(e)}>test next song</button>*/}
           
           </div>
         </div>

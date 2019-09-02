@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.Option-Btn {
+  height: 50px;
+  /*background-color: #001f3f;*/
+  background-color: transparent;
+  /*border: none;*/
+  border-radius: 5px;
+  color: #80bfff;
+  /*color: #000;*/
+  font-weight: bold;
+  font-size: 1em;
+  padding: 10px;
+  margin: 10px;
+}
+
+h1 {
+  color: #80bfff;
+}
