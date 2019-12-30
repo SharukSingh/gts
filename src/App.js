@@ -108,6 +108,10 @@ class App extends Component {
     }
   }
 
+  timer() {
+    return 5;
+  }
+
   render() {
 
     console.log('render')
@@ -128,6 +132,10 @@ class App extends Component {
           </audio>
           <br />
 
+          <progress value="1" max="10"></progress>
+
+          <p>time: {this.timer()}</p>
+
 
           <div>
             <button className="Option-Btn" onClick={(e) => this.check(e)} value={this.state.options[0]}>{this.state.options[0]}</button> {/*#1*/}
@@ -143,4 +151,32 @@ class App extends Component {
     )
   }
 }
+
+/*
+<audio id="player" src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview118/v4/90/1c/dc/901cdc1f-aff3-c2b3-fb5d-0877f3f92bf4/mzaf_3141468634002767849.plus.aac.p.m4a">
+  not supported
+</audio>
+
+<button onclick="document.getElementById('player').play()">Play</button>
+<button onclick="document.getElementById('player').pause()">Pause</button>
+
+
+
+render() {
+    const buttons = [1, 2, 3].map(id => (
+      <button
+        key={id}
+        name={`button${id}`}
+        onClick={this.onClick}
+      >{`Button #${id}`}</button>
+    ));
+
+    return <div className="App">{buttons}</div>;
+  }
+  */
+
+
+
+
+
 export default App
